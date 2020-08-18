@@ -1,8 +1,8 @@
-package com.example.graphql.resolver;
+package com.example.graphql.mutation;
 
 import com.coxautodev.graphql.tools.GraphQLMutationResolver;
+import com.example.graphql.entity.User;
 import com.example.graphql.repository.UserRepository;
-import com.example.graphql.type.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

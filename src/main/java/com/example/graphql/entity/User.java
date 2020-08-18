@@ -1,9 +1,8 @@
-package com.example.graphql.type;
+package com.example.graphql.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 
 @NoArgsConstructor
 @AllArgsConstructor
