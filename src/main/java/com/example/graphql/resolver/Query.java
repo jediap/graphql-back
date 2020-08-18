@@ -15,10 +15,6 @@ public class Query implements GraphQLQueryResolver {
     @Autowired
     private UserRepository userRepository;
 
-    /**public List<User> usersByDni(String dni){
-        return userRepository.findUsersByDni(dni);
-    }*/
-
     public List<User> users(UserFilter filter){
         return userRepository.findUsers(filter);
     }
