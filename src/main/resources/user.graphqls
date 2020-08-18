@@ -6,6 +6,9 @@ type User {
 
 input UserFilter {
     dni: String
+    username: String
+    page: Long
+    limit: Long
 }
 
 type Query {

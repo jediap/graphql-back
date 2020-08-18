@@ -36,7 +36,7 @@ public class UserRepository {
     public List<User> findUsers(UserFilter filter) {
         Stream<User> stream = users.stream();
         if (filter != null) {
-            stream = stream.filter(b -> b.getDni().matches(filter.getDni()));
+            stream = stream.filter(b -> b.getDni().matches(filter.getDni())).filter(b -> b.getUsername().matches(filter.getUsername()));
         }
         return stream.collect(Collectors.toList());
     }
