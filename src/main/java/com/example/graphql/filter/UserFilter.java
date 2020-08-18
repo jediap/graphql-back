@@ -6,5 +6,4 @@ import lombok.Data;
 public class UserFilter {
 
     private String dni;
-    private String username;
 }
