@@ -3,15 +3,11 @@ package com.example.graphql.repository;
 
 import com.example.graphql.type.User;
 
-import com.example.graphql.filter.UserFilter;
-import com.example.graphql.type.User;
+import com.example.graphql.input.UserFilter;
 import org.springframework.stereotype.Component;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
-import java.util.Optional;
 import java.util.concurrent.atomic.AtomicLong;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
