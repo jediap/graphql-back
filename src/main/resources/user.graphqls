@@ -1,0 +1,17 @@
+type User {
+    id: ID
+    dni: String
+    username: String
+}
+
+input UserFilter {
+    dni: String
+}
+
+type Query {
+    users(filter: UserFilter): [User]!
+}
+
+type Mutation {
+    addUser(dni: String, username: String) : User
+}
