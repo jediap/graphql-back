@@ -3,7 +3,7 @@ package com.example.graphql.repository;
 
 import com.example.graphql.type.User;
 
-import com.example.graphql.input.UserFilter;
+import com.example.graphql.filter.UserFilter;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
