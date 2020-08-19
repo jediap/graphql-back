@@ -9,7 +9,6 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
-@Component
 public class UserNotFoundException extends RuntimeException implements GraphQLError {
 
     private String invalidField;
