@@ -44,7 +44,7 @@ public class UserRepository {
 
     public User addUser(String dni, String username){
         if (userExists(dni)){
-            throw new UserAlreadyExistsException("A user already exists with this username, please try another one");
+            throw new UserAlreadyExistsException("A user already exists with this dni, please try another one");
         }
         User user = new User(ID_GENERATOR.getAndIncrement(), dni, username);
         users.add(user);
