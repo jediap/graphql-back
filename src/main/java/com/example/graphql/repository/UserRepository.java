@@ -4,7 +4,7 @@ package com.example.graphql.repository;
 import com.example.graphql.entity.User;
 
 import com.example.graphql.filter.UserFilter;
-import com.example.graphql.handler.UserAlreadyExistsException;
+import com.example.graphql.exception.UserAlreadyExistsException;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;

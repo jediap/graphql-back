@@ -1,9 +1,8 @@
-package com.example.graphql.handler;
+package com.example.graphql.exception;
 
 import graphql.ErrorType;
 import graphql.GraphQLError;
 import graphql.language.SourceLocation;
-import org.springframework.stereotype.Component;
 
 import java.util.Collections;
 import java.util.List;
