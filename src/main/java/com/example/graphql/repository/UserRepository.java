@@ -4,6 +4,7 @@ package com.example.graphql.repository;
 import com.example.graphql.entity.User;
 
 import com.example.graphql.filter.UserFilter;
+import com.example.graphql.handler.UserAlreadyExistsException;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -42,8 +43,19 @@ public class UserRepository {
     }
 
     public User addUser(String dni, String username){
+        if (userExists(dni)){
+            throw new UserAlreadyExistsException("A user already exists with this username, please try another one");
+        }
         User user = new User(ID_GENERATOR.getAndIncrement(), dni, username);
         users.add(user);
         return user;
+    }
+
+    private boolean userExists(String dni) {
+        for (User user : users)
+            if (user.getDni().equals(dni)){
+                return true;
+            }
+        return false;
     }
 }
