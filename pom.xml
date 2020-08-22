@@ -19,6 +19,8 @@
 
 		<graphql-java>5.0.2</graphql-java>
 		<graphql-java-tools.version>5.2.4</graphql-java-tools.version>
+		<jwks-rsa.version>0.12.0</jwks-rsa.version>
+		<jakarta.ws.rs.version>2.1.6</jakarta.ws.rs.version>
 	</properties>
 
 	<dependencies>
@@ -40,6 +42,17 @@
 		</dependency>
 
 		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.security.oauth</groupId>
+			<artifactId>spring-security-oauth2</artifactId>
+			<version>2.3.4.RELEASE</version>
+		</dependency>
+
+		<dependency>
 			<groupId>com.graphql-java</groupId>
 			<artifactId>graphql-spring-boot-starter</artifactId>
 			<version>${graphql-java}</version>
@@ -49,7 +62,40 @@
 			<groupId>com.graphql-java</groupId>
 			<artifactId>graphiql-spring-boot-starter</artifactId>
 			<version>${graphql-java}</version>
-	    </dependency>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-jwt</artifactId>
+			<version>1.1.1.RELEASE</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.auth0</groupId>
+			<artifactId>jwks-rsa</artifactId>
+			<version>${jwks-rsa.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>jakarta.ws.rs</groupId>
+			<artifactId>jakarta.ws.rs-api</artifactId>
+			<version>${jakarta.ws.rs.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.glassfish.jersey.core</groupId>
+			<artifactId>jersey-client</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.glassfish.jersey.inject</groupId>
+			<artifactId>jersey-hk2</artifactId>
+			<version>2.27</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.ws</groupId>
+			<artifactId>spring-ws-core</artifactId>
+		</dependency>
 
 		<dependency>
 			<groupId>com.graphql-java</groupId>
@@ -62,7 +108,6 @@
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
 		</dependency>
-
 	</dependencies>
 
 	<build>

@@ -17,6 +17,10 @@ public class UserNotFoundException extends RuntimeException implements GraphQLEr
         this.invalidField = invalidField;
     }
 
+    public UserNotFoundException(String message) {
+        super(message);
+    }
+
     @Override
     public List<SourceLocation> getLocations() {
         return null;
