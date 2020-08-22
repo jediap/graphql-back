@@ -1,4 +1,4 @@
-package com.example.graphql.mutation;
+package com.example.graphql.graphql.mutation;
 
 import com.coxautodev.graphql.tools.GraphQLMutationResolver;
 import com.example.graphql.entity.User;

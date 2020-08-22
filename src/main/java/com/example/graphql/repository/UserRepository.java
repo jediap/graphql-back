@@ -3,7 +3,7 @@ package com.example.graphql.repository;
 
 import com.example.graphql.entity.User;
 
-import com.example.graphql.filter.UserFilter;
+import com.example.graphql.criteria.UserCriteria;
 import com.example.graphql.exception.UserAlreadyExistsException;
 import org.springframework.stereotype.Component;
 
@@ -34,7 +34,7 @@ public class UserRepository {
         return users.stream().filter(b -> b.getId().equals(id)).findFirst().orElse(null);
     }
 
-    public List<User> findUsers(UserFilter filter) {
+    public List<User> findUsers(UserCriteria filter) {
         Stream<User> stream = users.stream();
         if (filter != null) {
             stream = stream.filter(b -> b.getDni().matches(filter.getDni())).filter(b -> b.getUsername().matches(filter.getUsername()));

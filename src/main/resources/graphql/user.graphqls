@@ -4,7 +4,7 @@ type User {
     username: String
 }
 
-input UserFilter {
+input UserCriteria {
     dni: String
     username: String
     page: Long
@@ -12,7 +12,7 @@ input UserFilter {
 }
 
 type Query {
-    users(filter: UserFilter): [User]!
+    users(filter: UserCriteria): [User]!
 }
 
 type Mutation {
