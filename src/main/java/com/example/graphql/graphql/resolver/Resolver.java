@@ -15,4 +15,5 @@ import org.springframework.stereotype.Component;
 @Component
 public class Resolver implements GraphQLResolver<User> {
 
+    // Address getAddress(User user);
 }

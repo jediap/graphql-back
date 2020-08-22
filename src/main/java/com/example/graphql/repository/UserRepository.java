@@ -34,10 +34,10 @@ public class UserRepository {
         return users.stream().filter(b -> b.getId().equals(id)).findFirst().orElse(null);
     }
 
-    public List<User> findUsers(UserCriteria filter) {
+    public List<User> findUsers(UserCriteria criteria) {
         Stream<User> stream = users.stream();
-        if (filter != null) {
-            stream = stream.filter(b -> b.getDni().matches(filter.getDni())).filter(b -> b.getUsername().matches(filter.getUsername()));
+        if (criteria != null) {
+            stream = stream.filter(b -> b.getDni().matches(criteria.getDni())).filter(b -> b.getUsername().matches(criteria.getUsername()));
         }
         return stream.collect(Collectors.toList());
     }
