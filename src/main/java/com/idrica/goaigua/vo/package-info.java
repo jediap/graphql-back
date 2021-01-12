@@ -1,0 +1,1 @@
+package com.idrica.goaigua.vo;
