@@ -30,9 +30,4 @@ public class UserNotFoundException extends RuntimeException implements GraphQLEr
     public ErrorType getErrorType() {
         return ErrorType.ValidationError;
     }
-
-    @Override
-    public Map<String, Object> getExtensions() {
-        return Collections.singletonMap("invalidField", invalidField);
-    }
 }
